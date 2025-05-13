@@ -1,0 +1,186 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f8f8f4;
+  color: #333;
+  margin: 0;
+  /* height: 100vh; // May conflict with existing App layout, review if needed */
+  /* display: flex; // May conflict with existing App layout */
+  /* justify-content: center; // May conflict with existing App layout */
+  /* align-items: center; // May conflict with existing App layout */
+}
+
+.container {
+  max-width: 960px;
+  margin: auto; /* This will center the .container block */
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-bottom: 24px;
+  color: #2f4f4f;
+}
+
+.form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form input,
+.form select {
+  padding: 8px;
+  flex: 1;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.form button {
+  padding: 8px 16px;
+  background: #2f4f4f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.budget-summary { /* Renamed from .budget for clarity */
+  margin-bottom: 20px;
+  font-size: 1.0em; /* Adjusted for consistency */
+  display: flex; /* For horizontal layout of summary items */
+  gap: 20px; /* Space between summary items */
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.budget-summary div {
+  flex: 1; /* Distribute space among items */
+}
+
+.summary {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #eef1f1;
+  border-radius: 8px;
+}
+
+.summary h3 {
+  margin-top: 0;
+  color: #2f4f4f;
+}
+
+.summary ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.summary li {
+  padding: 5px 0;
+  border-bottom: 1px solid #dde0e0;
+}
+.summary li:last-child {
+  border-bottom: none;
+}
+
+.expense-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px; /* Added margin */
+}
+
+.expense-table th,
+.expense-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left; /* Explicitly set text alignment */
+}
+
+.expense-table th {
+  background-color: #f0f4f4;
+  color: #314646;
+}
+
+.expense-table button {
+  margin-right: 5px;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #5a8f8f; /* Button color */
+  color: white;
+}
+
+.expense-table button:hover {
+  background-color: #4a7f7f;
+}
+
+.expense-table button:last-child {
+  margin-right: 0;
+}
+
+/* General link styling for back links etc. */
+.back-link {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #2f4f4f;
+  text-decoration: none;
+}
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  color: #d9534f; /* Bootstrap danger color */
+  background-color: #f2dede; /* Light red background */
+  border: 1px solid #ebccd1;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+/* Keep existing styles if needed, or integrate them. For example, your footer styles: */
+.footer {
+  /* position: fixed; // Consider if fixed footer is desired with new layout */
+  /* bottom: 0; */
+  width: 100%;
+  padding: 10px 0; /* Adjusted padding */
+  background-color: #343a40;
+  color: white; /* Added text color for footer */
+  text-align: center; /* Center footer text */
+  margin-top: auto; /* Pushes footer to bottom if main content is short */
+  z-index: 1000;
+}
+
+/* Ensure App div allows footer to be at the bottom */
+/* Your App.js already has d-flex flex-column min-vh-100 on the main div */
+
+/* Styles from your old App.css that might be useful */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-pointer:hover {
+  opacity: 0.8;
+}
+
+.shadow-sm {
+  transition: all 0.3s ease;
+}
+
+.shadow-sm:hover {
+  transform: translateY(-5px);
+}
+
+/* Remove default CRA styles if no longer needed */
+/*
+.App {
+  text-align: center;
+}
+.App-logo { ... }
+.App-header { ... }
+.App-link { ... }
+@keyframes App-logo-spin { ... }
+*/
